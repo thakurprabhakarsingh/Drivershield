@@ -6,9 +6,8 @@
 
 <title>DriveShield AI | Smart Driver Safety</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="description"
+content="DriveShield AI — AI-powered driver monitoring, vehicle diagnostics, GPS and intelligent safety alerts.">
 
 <style>
 *{
@@ -24,7 +23,7 @@ html{
 body{
     background:#02060b;
     color:#eefcff;
-    font-family:Inter,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     overflow-x:hidden;
 }
 
@@ -32,34 +31,34 @@ body::before{
     content:"";
     position:fixed;
     inset:0;
-    background:
-    radial-gradient(circle at 15% 20%,rgba(0,229,255,.10),transparent 28%),
-    radial-gradient(circle at 85% 60%,rgba(0,100,255,.08),transparent 30%);
-    pointer-events:none;
     z-index:-1;
+    background:
+        radial-gradient(circle at 15% 20%,rgba(0,229,255,.10),transparent 28%),
+        radial-gradient(circle at 85% 60%,rgba(0,100,255,.08),transparent 30%);
+    pointer-events:none;
 }
 
-/* NAVIGATION */
+/* NAVBAR */
 
 nav{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
-    height:76px;
+    height:72px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:0 7%;
-    background:rgba(2,6,11,.78);
-    backdrop-filter:blur(18px);
+    background:rgba(2,6,11,.92);
     border-bottom:1px solid rgba(94,240,255,.12);
-    z-index:100;
+    z-index:1000;
 }
 
 .logo{
-    font-family:"Space Grotesk";
     font-size:22px;
-    font-weight:700;
+    font-weight:800;
+    letter-spacing:-.5px;
 }
 
 .logo span{
@@ -84,8 +83,8 @@ nav{
 
 .menu{
     display:none;
-    font-size:25px;
     color:#5ef0ff;
+    font-size:26px;
     cursor:pointer;
 }
 
@@ -122,7 +121,6 @@ nav{
 }
 
 h1{
-    font-family:"Space Grotesk";
     font-size:clamp(48px,6vw,82px);
     line-height:.98;
     letter-spacing:-4px;
@@ -131,6 +129,7 @@ h1{
 .gradient{
     background:linear-gradient(90deg,#fff,#5ef0ff,#268cff);
     -webkit-background-clip:text;
+    background-clip:text;
     color:transparent;
 }
 
@@ -154,7 +153,7 @@ h1{
     padding:14px 22px;
     border-radius:12px;
     font-size:14px;
-    font-weight:600;
+    font-weight:700;
     transition:.3s;
     cursor:pointer;
 }
@@ -162,6 +161,7 @@ h1{
 .primary{
     color:#001014;
     background:#5ef0ff;
+    border:none;
     box-shadow:0 0 35px rgba(94,240,255,.22);
 }
 
@@ -172,7 +172,7 @@ h1{
 
 .secondary{
     border:1px solid #213741;
-    color:white;
+    color:#fff;
 }
 
 .secondary:hover{
@@ -180,7 +180,7 @@ h1{
     color:#5ef0ff;
 }
 
-/* HERO VISUAL */
+/* HERO IMAGE */
 
 .heroVisual{
     position:relative;
@@ -203,9 +203,8 @@ h1{
     width:220px;
     padding:18px;
     border-radius:18px;
-    background:rgba(4,13,21,.90);
+    background:rgba(4,13,21,.96);
     border:1px solid rgba(94,240,255,.2);
-    backdrop-filter:blur(15px);
 }
 
 .hudTitle{
@@ -251,7 +250,6 @@ section{
 }
 
 .sectionTitle{
-    font-family:"Space Grotesk";
     font-size:clamp(32px,4vw,52px);
     letter-spacing:-2px;
     margin-bottom:18px;
@@ -492,7 +490,6 @@ section{
     border-radius:25px;
     background:linear-gradient(145deg,#07151d,#040a0f);
     border:1px solid #17343e;
-    box-shadow:0 0 60px rgba(0,220,255,.04);
 }
 
 .formGrid{
@@ -523,11 +520,10 @@ section{
     padding:14px 15px;
     border-radius:12px;
     outline:none;
-    color:white;
+    color:#fff;
     background:#071018;
     border:1px solid #19323b;
-    font-family:Inter,sans-serif;
-    transition:.3s;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 .inputGroup input:focus,
@@ -544,7 +540,6 @@ section{
 
 .feedbackButton{
     margin-top:20px;
-    border:none;
 }
 
 .formStatus{
@@ -565,13 +560,12 @@ section{
     border-radius:30px;
     text-align:center;
     background:
-    radial-gradient(circle at center,rgba(0,220,255,.13),transparent 55%),
-    #061017;
+        radial-gradient(circle at center,rgba(0,220,255,.13),transparent 55%),
+        #061017;
     border:1px solid #153640;
 }
 
 .cta h2{
-    font-family:"Space Grotesk";
     font-size:45px;
     margin-bottom:15px;
 }
@@ -599,7 +593,7 @@ footer{
     .navlinks{
         display:none;
         position:absolute;
-        top:76px;
+        top:72px;
         left:0;
         width:100%;
         padding:25px;
@@ -697,7 +691,7 @@ footer{
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -758,9 +752,10 @@ footer{
     <div class="heroVisual">
 
         <img
-        class="carImage"
-        src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=85"
-        alt="Smart vehicle">
+            class="carImage"
+            src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=85"
+            alt="Smart vehicle"
+        >
 
         <div class="hud">
 
@@ -838,9 +833,10 @@ footer{
         <div>
 
             <img
-            class="problemImage"
-            src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=85"
-            alt="Driver safety">
+                class="problemImage"
+                src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1000&q=85"
+                alt="Driver safety"
+            >
 
         </div>
 
@@ -865,7 +861,6 @@ footer{
         DriveShield AI connects the driver, vehicle, sensors
         and cloud into one intelligent safety platform.
     </p>
-
 
     <div class="solutionGrid">
 
@@ -943,7 +938,6 @@ footer{
         of personal safety and vehicle condition.
     </p>
 
-
     <div class="dashboard">
 
         <div class="dashboardMain">
@@ -963,7 +957,6 @@ footer{
                 </div>
 
             </div>
-
 
             <div class="metricGrid">
 
@@ -1001,7 +994,6 @@ footer{
 
         </div>
 
-
         <div class="dashboardSide">
 
             <small style="color:#607883">
@@ -1012,12 +1004,13 @@ footer{
                 88
             </div>
 
-            <center>
+            <div style="text-align:center">
                 <strong>Excellent Attention</strong>
+
                 <p style="color:#708690;font-size:12px;margin-top:8px">
                     AI monitoring active
                 </p>
-            </center>
+            </div>
 
         </div>
 
@@ -1043,7 +1036,6 @@ footer{
         an intelligent safety engine before generating alerts.
     </p>
 
-
     <div class="flow">
 
         <div class="flowBox">Camera</div>
@@ -1055,7 +1047,6 @@ footer{
         <div class="flowBox">Safety Alert</div>
 
     </div>
-
 
     <div class="flow">
 
@@ -1088,7 +1079,6 @@ footer{
         A modular technology stack allows DriveShield AI
         to evolve from prototype to connected vehicle platform.
     </p>
-
 
     <div class="techGrid">
 
@@ -1164,95 +1154,66 @@ footer{
             suggest a feature, or report an issue.
         </p>
 
-
         <div class="feedbackBox">
 
             <!--
-            IMPORTANT:
-            Replace YOUR_FORMSPREE_ID with your actual
-            Formspree form ID.
+            This demo form works without any external service.
+            For real email delivery, connect Formspree,
+            FormSubmit, Firebase, or your own backend.
             -->
 
-            <form
-            id="feedbackForm"
-            action="https://formspree.io/f/YOUR_FORMSPREE_ID"
-            method="POST"
-            >
-
-                <input
-                type="hidden"
-                name="_subject"
-                value="DriveShield AI Portfolio Feedback"
-                >
-
-                <input
-                type="hidden"
-                name="_to"
-                value="prabhakarsingh8586@gmail.com"
-                >
+            <form id="feedbackForm">
 
                 <div class="formGrid">
 
                     <div class="inputGroup">
 
-                        <label>Your Name</label>
+                        <label for="name">Your Name</label>
 
                         <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                        required
+                            id="name"
+                            type="text"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
                         >
 
                     </div>
 
-
                     <div class="inputGroup">
 
-                        <label>Your Email</label>
+                        <label for="email">Your Email</label>
 
                         <input
-                        type="email"
-                        name="email"
-                        placeholder="you@example.com"
-                        required
+                            id="email"
+                            type="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            required
                         >
 
                     </div>
 
-
                     <div class="inputGroup">
 
-                        <label>Feedback Type</label>
+                        <label for="type">Feedback Type</label>
 
-                        <select name="feedback_type">
+                        <select id="type" name="feedback_type">
 
-                            <option value="General Feedback">
-                                General Feedback
-                            </option>
-
-                            <option value="Feature Suggestion">
-                                Feature Suggestion
-                            </option>
-
-                            <option value="Bug Report">
-                                Bug Report
-                            </option>
-
-                            <option value="Collaboration">
-                                Collaboration
-                            </option>
+                            <option>General Feedback</option>
+                            <option>Feature Suggestion</option>
+                            <option>Bug Report</option>
+                            <option>Collaboration</option>
 
                         </select>
 
                     </div>
 
-
                     <div class="inputGroup">
 
-                        <label>Rating</label>
+                        <label for="rating">Rating</label>
 
-                        <select name="rating">
+                        <select id="rating" name="rating">
 
                             <option value="5">★★★★★ Excellent</option>
                             <option value="4">★★★★ Very Good</option>
@@ -1264,35 +1225,34 @@ footer{
 
                     </div>
 
-
                     <div class="inputGroup full">
 
-                        <label>Your Message</label>
+                        <label for="message">Your Message</label>
 
                         <textarea
-                        name="message"
-                        placeholder="Write your feedback..."
-                        required
+                            id="message"
+                            name="message"
+                            placeholder="Write your feedback..."
+                            required
                         ></textarea>
 
                     </div>
 
                 </div>
 
-
                 <button
-                type="submit"
-                class="btn primary feedbackButton"
+                    type="submit"
+                    class="btn primary feedbackButton"
                 >
-                    Send Feedback →
+                    Submit Feedback →
                 </button>
 
-
                 <div
-                class="formStatus"
-                id="formStatus"
+                    class="formStatus"
+                    id="formStatus"
                 >
                     ✓ Feedback submitted successfully.
+
                 </div>
 
             </form>
@@ -1342,140 +1302,109 @@ footer{
 
 function toggleMenu(){
 
-    document
-    .getElementById("navLinks")
-    .classList
-    .toggle("active");
+    const navLinks =
+        document.getElementById("navLinks");
+
+    navLinks.classList.toggle("active");
 
 }
 
 
-/* CLOSE MOBILE MENU AFTER CLICK */
+/* CLOSE MENU AFTER CLICK */
 
 document
-.querySelectorAll(".navlinks a")
-.forEach(link => {
+    .querySelectorAll(".navlinks a")
+    .forEach(function(link){
 
-    link.addEventListener("click", () => {
+        link.addEventListener("click",function(){
 
-        document
-        .getElementById("navLinks")
-        .classList
-        .remove("active");
+            document
+                .getElementById("navLinks")
+                .classList
+                .remove("active");
+
+        });
 
     });
 
-});
 
-
-/* FEEDBACK FORM */
+/* DEMO FEEDBACK FORM */
 
 const form =
-document.getElementById("feedbackForm");
+    document.getElementById("feedbackForm");
 
 const status =
-document.getElementById("formStatus");
+    document.getElementById("formStatus");
 
-
-form.addEventListener("submit", async function(event){
+form.addEventListener("submit",function(event){
 
     event.preventDefault();
 
-    const submitButton =
-    form.querySelector("button");
+    const button =
+        form.querySelector("button");
 
-    submitButton.disabled = true;
-    submitButton.innerText = "Sending...";
+    button.disabled = true;
+    button.innerText = "Submitting...";
 
+    setTimeout(function(){
 
-    try{
+        status.style.display = "block";
 
-        const response =
-        await fetch(form.action,{
-            method:"POST",
-            body:new FormData(form),
-            headers:{
-                "Accept":"application/json"
-            }
-        });
+        form.reset();
 
+        button.disabled = false;
+        button.innerText = "Submitted ✓";
 
-        if(response.ok){
+        setTimeout(function(){
 
-            status.style.display="block";
+            status.style.display = "none";
+            button.innerText = "Submit Feedback →";
 
-            form.reset();
+        },3000);
 
-            submitButton.innerText="Sent ✓";
-
-            setTimeout(() => {
-
-                submitButton.disabled=false;
-                submitButton.innerText="Send Feedback →";
-
-            },3000);
-
-        }
-
-        else{
-
-            throw new Error("Failed");
-
-        }
-
-    }
-
-    catch(error){
-
-        alert(
-        "Feedback send nahi hua. Please try again."
-        );
-
-        submitButton.disabled=false;
-        submitButton.innerText="Send Feedback →";
-
-    }
+    },700);
 
 });
 
 
-/* CARD ANIMATION */
+/* SCROLL ANIMATION */
 
-const cards =
-document.querySelectorAll(".card,.tech");
+const animatedElements =
+    document.querySelectorAll(".card,.tech");
 
 const observer =
-new IntersectionObserver(
-(entries)=>{
+    new IntersectionObserver(
+        function(entries){
 
-    entries.forEach(entry=>{
+            entries.forEach(function(entry){
 
-        if(entry.isIntersecting){
+                if(entry.isIntersecting){
 
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
 
+                }
+
+            });
+
+        },
+        {
+            threshold:0.10
         }
-
-    });
-
-},
-{
-    threshold:.10
-});
+    );
 
 
-cards.forEach(card=>{
+animatedElements.forEach(function(element){
 
-    card.style.opacity="0";
-    card.style.transform="translateY(20px)";
-    card.style.transition="all .6s ease";
+    element.style.opacity = "0";
+    element.style.transform = "translateY(20px)";
+    element.style.transition = "all .6s ease";
 
-    observer.observe(card);
+    observer.observe(element);
 
 });
 
 </script>
 
 </body>
-          </html>
+</html>
